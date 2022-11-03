@@ -11,3 +11,50 @@ f(n) could be:
 - constant (f(n) = 1 )
 - something entirely different
   <sub>f(n) - operation n - time</sub>
+
+  Examples:
+
+**O(1)**
+
+```javascript
+function sumOfIntegers(n) {
+  return (n * (n + 1)) / 2;
+}
+```
+
+3 operations[* + /] => O(1)
+
+**O(n)**
+
+```javascript
+function sumOfIntegers(n) {
+  let total = 0;
+  for (let i = 1; i <= n; i++) {
+    total += i;
+  }
+  return total;
+}
+```
+
+Number of operations is (eventually) bounded by multiple a of n
+[i++, total+=, loop] => O(n)
+
+**O(n²)**
+
+```javascript
+function printPairsOfNumbers(n) {
+  for (var i = 0; i < n; i++) {
+    for (var j = 0; j < n; j++) {
+      console.log(i, j);
+    }
+  }
+}
+```
+
+O(n) operation inside O(n) operation [nested loops]
+
+** Space Complexity in JS **
+
+- Most primitives (booleans, numbers, undefined, null) are constant space
+- Strings require O(n) space (where n is the string length)
+- Reference types are generally O(n), where n is the key length (for arrays) of the number of keys (for objects)
