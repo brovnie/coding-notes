@@ -10,7 +10,8 @@ f(n) could be:
 - quadratic (f(n) = n(power2))
 - constant (f(n) = 1 )
 - something entirely different
-  <sub>f(n) - operation n - time</sub>
+  <sub>f(n) - operation
+  n - time</sub>
 
   Examples:
 
